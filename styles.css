@@ -1,0 +1,634 @@
+/* styles.css */
+
+/* Reset some default styles */
+body, ul, h1, h2, h3, p {
+    margin: 0;
+    padding: 0;
+}
+
+/* Basic styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+    position: relative;
+    z-index: 1000;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.header-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Logo Styles */
+.logo img {
+    max-width: 100%;
+    height: auto;
+    display: block; /* Removes extra spacing */
+}
+
+/* Navigation Styles */
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav li {
+    margin-right: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #FF512F;
+}
+
+/* Media Query for Responsiveness */
+@media (max-width: 768px) {
+    .header-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .logo {
+        margin-bottom: 20px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav li {
+        margin: 10px 0;
+    }
+}/* Your existing CSS styles */
+
+/* Media Query for Responsiveness */
+@media (max-width: 768px) {
+    .header-content {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .logo {
+        margin-bottom: 0;
+    }
+
+    nav ul {
+        flex-direction: row;
+        text-align: center;
+    }
+
+    nav li {
+        margin: 0 10px; /* Adjust spacing between navigation links */
+    }
+}
+.hero {
+    background-image: url('hero-background.jpg'); /* Replace with your background image */
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    text-align: center;
+    padding: 100px 0;
+    position: relative;
+}
+
+.hero:before {
+    content: "";
+    background-color: rgba(0, 0, 0, 0.6); /* Background overlay color */
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+}
+
+.hero h1 {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: #FF512F;
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 30px;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #FF6A4D; /* Hover color */
+}
+
+.services {
+    background-image: linear-gradient(135deg, #ff6600, #e05a00);
+    color: #fff;
+    padding: 80px 0;
+}
+
+.services h2 {
+    text-align: center;
+    font-size: 28px;
+    margin-bottom: 30px;
+}
+
+.services {
+    background-color: #f9f9f9;
+    padding: 80px 0;
+}
+
+.services h2 {
+    text-align: center;
+    font-size: 28px;
+    margin-bottom: 30px;
+}   
+
+.service {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out;
+}
+
+.service:hover {
+    transform: translateY(-5px);
+}
+
+.service-content {
+    flex: 1;
+    padding: 20px;
+    border-radius: 10px;
+    background: linear-gradient(135deg, #ff6600, #e05a00);
+    color: #fff;
+}
+
+.service-icon {
+    font-size: 36px;
+    color: #fff;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.2);
+    padding: 20px;
+    margin-right: 20px;
+}
+
+.service-content h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.service-content p {
+    font-size: 16px;
+}
+
+
+.about-us {
+    display: flex;
+    align-items: center;
+    margin: 30px 0;
+}
+
+.about-image {
+    flex: 1;
+}
+
+.about-image img {
+    max-width: 100%;
+    height: auto;
+}
+
+.about-text {
+    flex: 2;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.about-text h2 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.about-text p {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+.about-us {
+    display: flex;
+    align-items: center;
+    margin: 30px 0;
+    background-color: #f9f9f9; /* Light background color */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Box shadow for depth */
+    overflow: hidden; /* Hide overflow for rounded corners */
+}
+
+.about-image {
+    flex: 1;
+    text-align: center;
+    padding: 20px;
+}
+
+.about-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px; /* Rounded image */
+}
+
+.about-text {
+    flex: 2;
+    padding: 20px;
+    background-color: #fff;
+}
+
+.about-text h2 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.about-text p {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+.about-text ul {
+    list-style-type: disc;
+    margin-left: 20px;
+    margin-top: 10px;
+}
+
+.about-text ul li {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 5px;
+}
+
+/* Hover effect for the entire section */
+.about-us:hover {
+    background-color: #fff; /* Change background on hover */
+    transition: background-color 0.3s ease-in-out;
+}
+
+/* Hover effect for the image */
+.about-image:hover img {
+    transform: scale(1.05); /* Scale up image on hover */
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Testimonial Section Styles */
+.testimonial {
+    background-color: #f9f9f9;
+    padding: 50px 0;
+    text-align: center;
+}
+
+.testimonial h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.testimonial-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+}
+
+.testimonial-card {
+    width: 300px; /* Adjust the width of each testimonial card */
+    margin: 20px;
+/*    padding: 20px;*/
+    padding-top: 50px; 
+    padding-right: 20px;
+    padding-left: 20px;
+    padding-bottom: 20px;/* Add padding inside the testimonial card */
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    position: relative; /* Add this for positioning the image */
+}
+
+.testimonial-card p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #333;
+}
+
+.testimonial-card .client-name {
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+/* Testimonial Image Styles */
+.testimonial-image {
+    text-align: center; /* Center the image horizontally */
+    position: absolute; /* Position the image within the card */
+    top: -30px; /* Adjust the top position to your liking */
+    left: 50%; /* Center the image horizontally */
+    transform: translateX(-50%); /* Center the image horizontally */
+}
+
+.testimonial-image img {
+    width: 80px; /* Set a constant width for the image */
+    height: 80px; /* Set a constant height for the image */
+    border-radius: 50%; /* Display the image as a circle */
+    border: 4px solid #fff; /* Add a border around the image */
+}
+.testimonial-rating {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.star-image {
+    width: 20px; /* Adjust the width of the star images */
+    height: 20px; /* Adjust the height of the star images */
+    margin-right: 5px;
+     /* Add spacing between star images */
+}
+
+
+/* Projects Section Styles */
+.projects {
+    padding: 80px 0; /* Adjust padding as needed */
+    text-align: center;
+    background-color: #f9f9f9;
+}
+
+.projects h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Responsive grid layout */
+    gap: 20px;
+    justify-items: center;
+}
+
+.project-card {
+    max-width: 300px; /* Adjust the maximum width of each project card */
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    padding: 20px;
+    transition: transform 0.2s; /* Add a smooth transition effect on hover */
+}
+
+.project-card:hover {
+    transform: scale(1.05); /* Enlarge the card on hover */
+}
+
+/* Add media queries for responsive design if needed */
+
+.contact {
+    background: linear-gradient(135deg, #FF512F, #F09819);
+    color: #fff;
+    padding: 80px 0;
+}
+
+.contact h2 {
+    text-align: center;
+    font-size: 28px;
+    margin-bottom: 30px;
+}
+
+.contact p {
+    text-align: center;
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+.contact-info {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 40px;
+}
+
+.contact-method {
+    text-align: center;
+}
+
+.contact-method i {
+    font-size: 36px;
+    color: #fff;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    padding: 20px;
+    margin-bottom: 10px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.contact-method i:hover {
+    transform: scale(1.1);
+}
+
+.contact-method p {
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+.contact-method a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    transition: color 0.3s ease-in-out;
+}
+
+.contact-method a:hover {
+    color: #FF512F;
+}
+
+.contact-form {
+    text-align: center;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.contact-form h3 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: border-color 0.3s ease-in-out;
+}
+
+input[type="text"]:hover,
+input[type="email"]:hover,
+textarea:hover {
+    border-color: #FF512F;
+}
+
+textarea {
+    resize: vertical;
+    height: 150px;
+}
+
+button[type="submit"] {
+    padding: 10px 20px;
+    background-color: #FF512F;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+button[type="submit"]:hover {
+    background-color: #F09819;
+}
+
+.form-status {
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+
+
+/* Footer Styles */
+/* CSS for the footer and map */
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 20px 0;
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.social-icons {
+  display: flex;
+}
+
+.social-icon {
+  margin-right: 20px;
+  text-decoration: none;
+  font-size: 24px;
+  transition: color 0.3s ease;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.social-icon i {
+  color: #fff;
+}
+
+.social-icon:last-child {
+  margin-right: 0;
+}
+
+/* Custom social icon styles */
+.social-icon.facebook-custom {
+  background-color: #1877f2;
+}
+
+.social-icon.twitter-custom {
+  background-color: #1da1f2;
+}
+
+.social-icon.linkedin-custom {
+  background-color: #0077b5;
+}
+
+.social-icon:hover i {
+  color: #FF512F;
+}
+
+/* styles.css */
+
+/* ... Your existing CSS ... */
+
+/* Tooltip styles */
+.tooltip {
+    position: absolute;
+    top: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #FF6A4D;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 14px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.btn:hover .tooltip {
+    opacity: 1;
+}
